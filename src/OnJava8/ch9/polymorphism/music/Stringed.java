@@ -1,18 +1,16 @@
 package OnJava8.ch9.polymorphism.music;
 
-public class Wind extends Instrument{
+public class Stringed extends Instrument{
     @Override
     public void play(Note n) {
-        System.out.println("Wind.play() " + n);
+        System.out.println("Stringed.play() " + n);
     }
-
     @Override
     String what() {
-        return "Wind";
+        return "Stringed";
     }
-
     @Override
     void adjust() {
-        System.out.println("Adjusting Wind");
+        System.out.println("Adjusting Stringed");
     }
 }
