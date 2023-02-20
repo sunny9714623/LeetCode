@@ -1,6 +1,8 @@
 package OnJava8.ch11;
 
 public class Parcel3 {
+    private int ii = 12;
+
     class Contents {
         private int i = 11;
 
@@ -17,7 +19,7 @@ public class Parcel3 {
         }
 
         String readLabel() {
-            return label;
+            return String.valueOf(ii);
         }
     }
 
