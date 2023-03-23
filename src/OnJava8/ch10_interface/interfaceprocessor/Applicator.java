@@ -1,8 +1,0 @@
-package OnJava8.ch10_interface.interfaceprocessor;
-
-public class Applicator {
-    public static void apply(Processor p, Object s) {
-        System.out.println("Using Processor " + p.name());
-        System.out.println(p.process(s));
-    }
-}

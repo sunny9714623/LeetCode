@@ -1,7 +1,5 @@
 package Leetcode.george.part02;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
