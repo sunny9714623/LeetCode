@@ -3,6 +3,7 @@ package onJava8.com.george.ch16.validating;
 import com.google.common.base.VerifyException;
 
 import static com.google.common.base.Verify.verify;
+import static com.google.common.base.Verify.verifyNotNull;
 
 public class GuavaAssertions {
     public static void main(String[] args) {
@@ -15,7 +16,28 @@ public class GuavaAssertions {
 
         try {
             verify(1 + 2 == 4, "Bad math");
-        } catch(VerifyException e) {
+        } catch (VerifyException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            verify(1 + 2 == 4, "Bad math: %s", "not 4");
+        } catch (VerifyException e) {
+            System.out.println(e.getMessage());
+        }
+
+        String s = "";
+        s = verifyNotNull(s);
+        s = null;
+        try {
+            verifyNotNull(s);
+        } catch (VerifyException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            verifyNotNull(s, "Shouldn't be null: %s", "arg s");
+        } catch (VerifyException e) {
             System.out.println(e.getMessage());
         }
     }
